@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mon Bien Locatif</title>
-  <meta name="description" content="Vendre au bon prix, avec méthode et visibilité." />
+  <meta name="description" content="Une agence immobilière pensée par des investisseurs, pour des investisseurs exigeants." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,10 +21,12 @@
       <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
 
       <nav class="main-nav" id="mainNav">
-        <a href="#approche">Notre approche</a>
+        <a href="#approche">Estimation</a>
         <a href="#methode">Méthode</a>
         <a href="#benefices">Bénéfices</a>
         <a href="#chiffres">Chiffres clés</a>
+        <a href="#biens">Biens en vente</a>
+        <a href="#ventes">Dernières ventes</a>
         <a href="#reseau">Réseau</a>
         <a href="#contact" class="btn btn-dark nav-cta">Nous contacter</a>
       </nav>
@@ -32,66 +34,44 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="eyebrow">Agence immobilière pensée pour les investisseurs exigeants</div>
-          <h1>Vendre au bon prix, avec méthode et visibilité</h1>
-          <p class="hero-text">
-            Un accompagnement premium pour vendre dans de meilleures conditions, avec une stratégie claire dès le départ.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-dark">Demander une estimation</a>
-            <a href="#approche" class="btn btn-light">Découvrir notre approche</a>
-          </div>
-        </div>
-
-        <div class="hero-panel reveal">
-          <div class="panel-top">
-            <div class="mini-card">
-              <span class="mini-label">Positionnement</span>
-              <strong>Premium</strong>
-            </div>
-            <div class="mini-card">
-              <span class="mini-label">Approche</span>
-              <strong>Investisseur</strong>
-            </div>
-          </div>
-
-          <div class="panel-main">
-            <div class="pill">Vente & stratégie</div>
-            <h2>Une commercialisation plus structurée, plus lisible, plus défendable.</h2>
-            <p>
-              Nous cherchons à construire une vente cohérente, crédible et bien positionnée, plutôt qu’à séduire avec une estimation flatteuse difficile à tenir.
-            </p>
-          </div>
+    <section class="hero hero-image">
+      <div class="hero-overlay"></div>
+      <div class="container hero-image-content reveal">
+        <div class="eyebrow eyebrow-light big-eyebrow">Mon Bien Locatif</div>
+        <h1>Une agence immobilière pensée par des investisseurs, pour des investisseurs exigeants.</h1>
+        <p class="hero-text hero-text-light">
+          Vendre, acheter ou investir avec une lecture plus stratégique du marché, des actifs et du potentiel réel de chaque projet.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary-hero">Demander une estimation</a>
+          <a href="#biens" class="btn btn-secondary-hero">Voir nos biens en vente</a>
         </div>
       </div>
     </section>
 
     <section id="approche" class="section">
-      <div class="container split-grid">
+      <div class="container split-grid split-grid-tight">
         <div class="reveal">
-          <div class="section-head">
-            <div class="eyebrow">Estimation</div>
-            <h2>Pourquoi nous privilégions une visite avant toute estimation</h2>
-            <p>
-              Donner un prix sans voir réellement le bien conduit souvent à des estimations imprécises, parfois flatteuses, mais rarement défendables au moment de vendre.
-            </p>
-          </div>
+          <div class="section-kicker">Estimation</div>
+          <h2 class="section-title-lg">Pourquoi nous privilégions une visite avant toute estimation</h2>
 
-          <p style="color:#6f655f;font-size:18px;margin:0 0 18px;">
+          <p class="body-lg">
+            Donner un prix sans voir réellement le bien conduit souvent à des estimations imprécises, parfois flatteuses, mais rarement défendables au moment de vendre.
+          </p>
+
+          <p class="body-lg">
             Notre approche consiste d’abord à comprendre le bien, son état, son potentiel, son environnement et son positionnement réel sur le marché.
           </p>
-          <p style="color:#6f655f;font-size:18px;margin:0;">
+
+          <p class="body-lg">
             L’objectif n’est pas de promettre plus, mais de construire une stratégie de vente plus cohérente, plus crédible et plus efficace.
           </p>
         </div>
 
-        <div class="portfolio-card reveal">
-          <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=1200&q=80" alt="Salon lumineux haut de gamme">
-          <div class="portfolio-body">
-            <div class="small-label">Lecture du bien</div>
+        <div class="image-card reveal">
+          <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=1400&q=80" alt="Intérieur lumineux haut de gamme">
+          <div class="image-card-body">
+            <div class="section-kicker">Lecture du bien</div>
             <h3>Une estimation sérieuse commence sur place</h3>
             <p>Un bien se valorise à partir de ses qualités réelles, de ses limites, de son potentiel et de la stratégie de mise en marché envisagée.</p>
             <span class="tag">Approche crédible</span>
@@ -100,47 +80,47 @@
       </div>
     </section>
 
-    <section id="methode" class="section">
+    <section id="methode" class="section section-tight-top">
       <div class="container">
         <div class="section-head centered reveal">
-          <div class="eyebrow">Méthode</div>
-          <h2>Une méthode plus rigoureuse, du premier échange à la vente</h2>
+          <div class="section-kicker">Méthode</div>
+          <h2 class="section-title-xl">Une méthode plus rigoureuse, du premier échange à la vente</h2>
           <p>Chaque étape est pensée pour défendre la valeur du bien, clarifier la stratégie et sécuriser la commercialisation.</p>
         </div>
 
-        <div class="cards-3">
-          <article class="soft-card reveal">
-            <h3>01</h3>
+        <div class="method-grid method-grid-6">
+          <article class="method-card reveal">
+            <div class="method-number">01</div>
             <p>Analyse du bien et de son potentiel</p>
           </article>
-          <article class="soft-card reveal">
-            <h3>02</h3>
+          <article class="method-card reveal">
+            <div class="method-number">02</div>
             <p>Estimation cohérente et défendable</p>
           </article>
-          <article class="soft-card reveal">
-            <h3>03</h3>
+          <article class="method-card reveal">
+            <div class="method-number">03</div>
             <p>Préparation de la commercialisation</p>
           </article>
-          <article class="soft-card reveal">
-            <h3>04</h3>
+          <article class="method-card reveal">
+            <div class="method-number">04</div>
             <p>Mise en valeur et diffusion ciblée</p>
           </article>
-          <article class="soft-card reveal">
-            <h3>05</h3>
+          <article class="method-card reveal">
+            <div class="method-number">05</div>
             <p>Gestion des demandes et des visites</p>
           </article>
-          <article class="soft-card reveal">
-            <h3>06</h3>
+          <article class="method-card reveal">
+            <div class="method-number">06</div>
             <p>Négociation et sécurisation de la vente</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-tight-top">
       <div class="container">
-        <div class="dark-block reveal">
-          <div class="eyebrow eyebrow-light">Positionnement</div>
+        <div class="dark-banner reveal">
+          <div class="section-kicker light">Positionnement</div>
           <h2>Une vente bien préparée protège mieux la valeur du bien</h2>
           <p>
             Une commercialisation réussie repose rarement sur un simple affichage de prix. Elle repose sur le bon positionnement, la bonne présentation et une stratégie capable de convaincre sans fragiliser la négociation.
@@ -149,56 +129,57 @@
       </div>
     </section>
 
-    <section id="benefices" class="section">
-      <div class="container split-grid">
-        <div class="reveal">
-          <div class="section-head">
-            <div class="eyebrow">Bénéfices</div>
-            <h2>Ce que vous gagnez concrètement</h2>
-            <p>Une approche plus claire, plus exigeante et plus cohérente pour vendre dans de meilleures conditions.</p>
-          </div>
-
-          <div class="faq-list">
-            <article class="faq-card">
-              <h3>Une estimation plus crédible</h3>
-              <p>Un prix fondé sur la réalité du bien et du marché, pas sur une promesse de façade.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Une stratégie de vente plus claire</h3>
-              <p>Chaque décision est prise avec un cap précis, du positionnement initial à la négociation.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Une meilleure mise en valeur du bien</h3>
-              <p>Présentation, diffusion et argumentaire sont pensés pour soutenir la perception de valeur.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Un accompagnement plus exigeant</h3>
-              <p>Moins d’improvisation, plus de méthode, plus de cohérence à chaque étape.</p>
-            </article>
-          </div>
+    <section id="benefices" class="section section-tight-top">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Bénéfices</div>
+          <h2 class="section-title-lg">Ce que vous gagnez concrètement</h2>
+          <p>Une approche plus claire, plus exigeante et plus cohérente pour vendre dans de meilleures conditions.</p>
         </div>
 
-        <div class="portfolio-card reveal">
-          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80" alt="Maison premium">
-          <div class="portfolio-body">
-            <div class="small-label">Commercialisation</div>
-            <h3>Défendre la valeur du bien avec plus de cohérence</h3>
-            <p>Une meilleure lecture du bien permet une meilleure stratégie de vente, donc une meilleure maîtrise de la perception, du rythme et de la négociation.</p>
-            <span class="tag">Accompagnement premium</span>
-          </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <h3>Une estimation plus crédible</h3>
+            <p>Un prix fondé sur la réalité du bien et du marché, pas sur une promesse de façade.</p>
+          </article>
+
+          <article class="benefit-feature reveal">
+            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80" alt="Architecture premium">
+            <div class="benefit-feature-body">
+              <div class="section-kicker">Commercialisation</div>
+              <h3>Défendre la valeur du bien avec plus de cohérence</h3>
+              <p>Une meilleure lecture du bien permet une meilleure stratégie de vente, donc une meilleure maîtrise de la perception, du rythme et de la négociation.</p>
+              <span class="tag">Accompagnement premium</span>
+            </div>
+          </article>
+
+          <article class="benefit-card reveal">
+            <h3>Une stratégie de vente plus claire</h3>
+            <p>Chaque décision est prise avec un cap précis, du positionnement initial à la négociation.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <h3>Une meilleure mise en valeur du bien</h3>
+            <p>Présentation, diffusion et argumentaire sont pensés pour soutenir la perception de valeur.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <h3>Un accompagnement plus exigeant</h3>
+            <p>Moins d’improvisation, plus de méthode, plus de cohérence à chaque étape.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="chiffres" class="stats section">
+    <section id="chiffres" class="section section-tight-top">
       <div class="container">
         <div class="section-head centered reveal">
-          <div class="eyebrow">Chiffres clés</div>
-          <h2>Quelques repères de notre approche</h2>
+          <div class="section-kicker">Chiffres clés</div>
+          <h2 class="section-title-xl">Quelques repères de notre approche</h2>
           <p>Une vision immobilière construite autour de la performance, de la sélection et de la cohérence des projets.</p>
         </div>
 
-        <div class="stats-grid">
+        <div class="stats-grid premium-stats">
           <article class="stat-card reveal">
             <div class="stat-value">+5 M€</div>
             <p>investis dans des opérations immobilières suivies avec une logique de performance et de sélection</p>
@@ -215,42 +196,104 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split-grid">
-        <div class="dark-block reveal">
-          <div class="eyebrow eyebrow-light">Différenciation</div>
-          <h2>Une agence pensée par des investisseurs, pas comme une agence classique</h2>
-          <p>
-            Mon Bien Locatif adopte une lecture plus stratégique du marché et des actifs. Nous raisonnons en valeur, en potentiel, en cohérence patrimoniale et en qualité d’exécution.
-          </p>
+    <section id="biens" class="section section-tight-top">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Biens en vente</div>
+          <h2 class="section-title-lg">Une sélection de biens actuellement disponibles</h2>
+          <p>Des biens choisis pour leur potentiel, leur cohérence de positionnement et l’intérêt réel de leur exploitation ou valorisation.</p>
         </div>
 
-        <div class="pillars-grid">
-          <article class="pillar-card reveal">
-            <h3>Vision investisseur</h3>
-            <p>Une lecture plus structurée des biens, du marché et des leviers de valorisation.</p>
+        <div class="listing-grid">
+          <article class="listing-card reveal">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80" alt="Bien en vente 1">
+            <div class="listing-body">
+              <div class="listing-meta">Guise • 120 m² • DPE D</div>
+              <h3>Immeuble avec potentiel de valorisation</h3>
+              <p class="listing-price">189 000 € • Rendement brut estimé : 9,8 %</p>
+              <p>Points forts : emplacement, découpe cohérente, potentiel locatif, marge d’optimisation.</p>
+              <a href="#" class="text-link">En savoir plus</a>
+            </div>
           </article>
-          <article class="pillar-card reveal">
-            <h3>Logique de cohérence</h3>
-            <p>Chaque projet est évalué avec plus de méthode, de discernement et de stratégie.</p>
+
+          <article class="listing-card reveal">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80" alt="Bien en vente 2">
+            <div class="listing-body">
+              <div class="listing-meta">Saint-Quentin • 85 m² • DPE C</div>
+              <h3>Appartement à forte logique locative</h3>
+              <p class="listing-price">129 000 € • Rendement brut estimé : 8,4 %</p>
+              <p>Points forts : demande locative, bon état général, exploitation simple, charges maîtrisées.</p>
+              <a href="#" class="text-link">En savoir plus</a>
+            </div>
           </article>
-          <article class="pillar-card reveal">
-            <h3>Exécution plus qualitative</h3>
-            <p>Communication, positionnement, présentation et suivi sont pensés pour monter en gamme.</p>
-          </article>
-          <article class="pillar-card reveal">
-            <h3>Accompagnement sur mesure</h3>
-            <p>Une réponse plus claire et plus sérieuse pour les vendeurs, acquéreurs et investisseurs exigeants.</p>
+
+          <article class="listing-card reveal">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80" alt="Bien en vente 3">
+            <div class="listing-body">
+              <div class="listing-meta">Laon • 210 m² • DPE E</div>
+              <h3>Maison avec potentiel patrimonial</h3>
+              <p class="listing-price">245 000 € • Potentiel de revalorisation élevé</p>
+              <p>Points forts : surface, cachet, projection long terme, marge de valorisation après travaux.</p>
+              <a href="#" class="text-link">En savoir plus</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="reseau" class="section">
+    <section id="ventes" class="section section-tight-top">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Dernières ventes</div>
+          <h2 class="section-title-lg">Des ventes finalisées avec une logique de positionnement et d’exécution</h2>
+          <p>Quelques exemples récents représentatifs de notre manière de préparer, défendre et finaliser une vente.</p>
+        </div>
+
+        <div class="listing-grid">
+          <article class="listing-card reveal sold-card">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80" alt="Bien vendu 1">
+            <div class="sold-badge">Vendu</div>
+            <div class="listing-body">
+              <div class="listing-meta">Compiègne • 92 m² • DPE C</div>
+              <h3>Appartement familial en secteur recherché</h3>
+              <p class="listing-price">Vendu</p>
+              <p>Vente structurée autour d’un bon positionnement initial et d’une présentation plus qualitative.</p>
+              <a href="#" class="text-link">Voir le détail</a>
+            </div>
+          </article>
+
+          <article class="listing-card reveal sold-card">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80" alt="Bien vendu 2">
+            <div class="sold-badge">Vendu</div>
+            <div class="listing-body">
+              <div class="listing-meta">Amiens • 145 m² • DPE D</div>
+              <h3>Maison rénovée avec bon positionnement marché</h3>
+              <p class="listing-price">Vendu</p>
+              <p>Vente sécurisée grâce à une stratégie plus claire et une mise en valeur cohérente du bien.</p>
+              <a href="#" class="text-link">Voir le détail</a>
+            </div>
+          </article>
+
+          <article class="listing-card reveal sold-card">
+            <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1400&q=80" alt="Bien vendu 3">
+            <div class="sold-badge">Vendu</div>
+            <div class="listing-body">
+              <div class="listing-meta">Reims • 68 m² • DPE C</div>
+              <h3>Bien locatif vendu dans de bonnes conditions</h3>
+              <p class="listing-price">Vendu</p>
+              <p>Un projet mené avec une lecture plus précise du potentiel et du bon niveau de valorisation.</p>
+              <a href="#" class="text-link">Voir le détail</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reseau" class="section section-tight-top">
       <div class="container network-box">
         <div class="network-copy reveal">
-          <div class="eyebrow">Rejoindre le réseau</div>
-          <h2>Rejoindre une structure plus qualitative</h2>
+          <div class="section-kicker">Rejoindre le réseau</div>
+          <h2 class="section-title-lg">Rejoindre une structure plus qualitative</h2>
           <p>
             Nous nous adressons aux profils qui veulent une image plus premium, un positionnement plus fort et une approche plus crédible auprès d’une clientèle exigeante.
           </p>
@@ -271,8 +314,8 @@
     <section id="contact" class="section contact-section">
       <div class="container contact-box">
         <div class="contact-copy reveal">
-          <div class="eyebrow eyebrow-light">Passer à l’action</div>
-          <h2>Parlons de votre bien et de la meilleure manière de le positionner</h2>
+          <div class="section-kicker light">Passer à l’action</div>
+          <h2 class="section-title-lg light-title">Parlons de votre bien et de la meilleure manière de le positionner</h2>
           <p>
             Chaque projet mérite une lecture sérieuse, une stratégie claire et un accompagnement capable de défendre sa valeur.
           </p>
