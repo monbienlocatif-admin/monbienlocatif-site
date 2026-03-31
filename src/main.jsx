@@ -1,156 +1,198 @@
-import { motion } from "framer-motion";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { motion } from 'framer-motion';
+import { ArrowRight, BarChart3, Building2, ChevronRight, LineChart, ShieldCheck, Users } from 'lucide-react';
+import './index.css';
 
 const siteContent = {
   brand: {
-    name: "Mon Bien Locatif",
-    tagline: "Immobilier d’investissement & accompagnement premium",
+    name: 'Mon Bien Locatif',
+    tagline: 'Immobilier d’investissement & accompagnement premium',
   },
-
   hero: {
-    eyebrow: "Agence immobilière pensée pour les investisseurs exigeants",
-    title: "L’immobilier pensé par des investisseurs, pour des investisseurs exigeants.",
-    text: "Vendre, acheter, investir ou structurer un projet immobilier avec plus de méthode, plus de discernement et un niveau d’accompagnement supérieur.",
-    primaryCta: "Vendre mon bien",
-    secondaryCta: "Acheter / Investir",
-    tertiaryCta: "Rejoindre le réseau",
-    cardTitle: "Une approche plus stratégique du marché et des actifs.",
-    cardText: "Nous privilégions la qualité des décisions, la cohérence des projets et la défense de la valeur plutôt qu’une simple logique de volume.",
+    eyebrow: 'Agence immobilière pensée pour les investisseurs exigeants',
+    title: 'L’immobilier pensé par des investisseurs, pour des investisseurs exigeants.',
+    text: 'Vendre, acheter, investir ou structurer un projet immobilier avec plus de méthode, plus de discernement et un niveau d’accompagnement supérieur.',
+    primaryCta: 'Vendre mon bien',
+    secondaryCta: 'Acheter / Investir',
+    tertiaryCta: 'Rejoindre le réseau',
+    cardTitle: 'Une approche plus stratégique du marché et des actifs.',
+    cardText:
+      'Nous privilégions la qualité des décisions, la cohérence des projets et la défense de la valeur plutôt qu’une simple logique de volume.',
   },
-
+  stats: [
+    {
+      value: '+5 M€',
+      label:
+        'investis dans des opérations immobilières suivies avec une logique de performance et de sélection',
+    },
+    {
+      value: '40+',
+      label:
+        'biens accompagnés ou gérés avec une approche structurée, exigeante et orientée long terme',
+    },
+    {
+      value: '10 %',
+      label:
+        'de rendement brut minimum visé sur les projets à fort potentiel sélectionnés',
+    },
+  ],
+  services: [
+    {
+      title: 'Vendre un bien',
+      text:
+        'Une mise en marché plus intelligente, plus qualitative et plus crédible, pensée pour défendre la valeur du bien et maximiser le résultat final.',
+      cta: 'Demander une estimation',
+    },
+    {
+      title: 'Acheter / Investir',
+      text:
+        'Un accompagnement orienté stratégie, rendement, cohérence patrimoniale et sécurisation du projet, de l’analyse à la concrétisation.',
+      cta: 'Parler de mon projet',
+    },
+    {
+      title: 'Rejoindre le réseau',
+      text:
+        'Une structure pensée pour les profils ambitieux qui veulent une image plus premium, de meilleurs outils et un positionnement plus fort.',
+      cta: 'Découvrir le réseau',
+    },
+  ],
   contact: {
-    eyebrow: "Passer à l’action",
-    title: "Parlons de votre bien, de votre projet ou de votre développement.",
-    text: "Vente, acquisition, investissement, structuration ou recrutement : nous construisons une réponse claire, cohérente et adaptée à votre objectif.",
-    button: "Être recontacté",
+    eyebrow: 'Passer à l’action',
+    title: 'Parlons de votre bien, de votre projet ou de votre développement.',
+    text:
+      'Vente, acquisition, investissement, structuration ou recrutement : nous construisons une réponse claire, cohérente et adaptée à votre objectif.',
+    button: 'Être recontacté',
   },
-
   images: {
-    portfolio1: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-    portfolio2: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-    portfolio3: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+    portfolio1:
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
+    portfolio2:
+      'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80',
+    portfolio3:
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80',
   },
 };
-import { ArrowRight, BarChart3, Building2, ChevronRight, LineChart, ShieldCheck, Users } from "lucide-react";
-
-const stats = [
-  {
-    value: "+5 M€",
-    label: "investis dans des opérations immobilières suivies avec une logique de performance et de sélection",
-  },
-  {
-    value: "40+",
-    label: "biens accompagnés ou gérés avec une approche structurée, exigeante et orientée long terme",
-  },
-  {
-    value: "10 %",
-    label: "de rendement brut minimum visé sur les projets à fort potentiel sélectionnés",
-  },
-];
 
 const services = [
   {
     icon: <Building2 className="h-6 w-6" />,
-    title: "Vendre un bien",
-    text: "Une mise en marché plus intelligente, plus qualitative et plus crédible, pensée pour défendre la valeur du bien et maximiser le résultat final.",
-    cta: "Demander une estimation",
+    title: siteContent.services[0].title,
+    text: siteContent.services[0].text,
+    cta: siteContent.services[0].cta,
   },
   {
     icon: <LineChart className="h-6 w-6" />,
-    title: "Acheter / Investir",
-    text: "Un accompagnement orienté stratégie, rendement, cohérence patrimoniale et sécurisation du projet, de l’analyse à la concrétisation.",
-    cta: "Parler de mon projet",
+    title: siteContent.services[1].title,
+    text: siteContent.services[1].text,
+    cta: siteContent.services[1].cta,
   },
   {
     icon: <Users className="h-6 w-6" />,
-    title: "Rejoindre le réseau",
-    text: "Une structure pensée pour les profils ambitieux qui veulent une image plus premium, de meilleurs outils et un positionnement plus fort.",
-    cta: "Découvrir le réseau",
+    title: siteContent.services[2].title,
+    text: siteContent.services[2].text,
+    cta: siteContent.services[2].cta,
   },
 ];
 
 const pillars = [
   {
-    title: "Vision investisseur",
-    text: "Chaque décision est pensée avec une logique de rentabilité, de valorisation, de cohérence patrimoniale et de maîtrise du risque.",
+    title: 'Vision investisseur',
+    text:
+      'Chaque décision est pensée avec une logique de rentabilité, de valorisation, de cohérence patrimoniale et de maîtrise du risque.',
   },
   {
-    title: "Exigence de sélection",
-    text: "Nous privilégions les projets solides, défendables et stratégiquement cohérents plutôt que la logique de volume.",
+    title: 'Exigence de sélection',
+    text:
+      'Nous privilégions les projets solides, défendables et stratégiquement cohérents plutôt que la logique de volume.',
   },
   {
-    title: "Accompagnement sur mesure",
-    text: "Vente, acquisition, investissement ou structuration : chaque mission est adaptée au niveau d’exigence et aux objectifs du client.",
+    title: 'Accompagnement sur mesure',
+    text:
+      'Vente, acquisition, investissement ou structuration : chaque mission est adaptée au niveau d’exigence et aux objectifs du client.',
   },
   {
-    title: "Image plus haut de gamme",
-    text: "Le site, la communication et la relation client doivent refléter un niveau de qualité supérieur aux réseaux immobiliers classiques.",
+    title: 'Image plus haut de gamme',
+    text:
+      'Le site, la communication et la relation client doivent refléter un niveau de qualité supérieur aux réseaux immobiliers classiques.',
   },
 ];
 
 const investmentCards = [
   {
-    title: "Projet patrimonial",
-    text: "Pour les clients qui recherchent la qualité d’emplacement, la cohérence d’actif, la tenue long terme et la valorisation progressive.",
+    title: 'Projet patrimonial',
+    text:
+      'Pour les clients qui recherchent la qualité d’emplacement, la cohérence d’actif, la tenue long terme et la valorisation progressive.',
   },
   {
-    title: "Projet orienté rendement",
-    text: "Pour les investisseurs qui veulent analyser le brut, le net, les travaux, le financement, la fiscalité et le risque avec méthode.",
+    title: 'Projet orienté rendement',
+    text:
+      'Pour les investisseurs qui veulent analyser le brut, le net, les travaux, le financement, la fiscalité et le risque avec méthode.',
   },
   {
-    title: "Arbitrage stratégique",
-    text: "Pour décider s’il faut acheter, vendre, restructurer, optimiser ou conserver un actif avec une lecture plus lucide du potentiel réel.",
+    title: 'Arbitrage stratégique',
+    text:
+      'Pour décider s’il faut acheter, vendre, restructurer, optimiser ou conserver un actif avec une lecture plus lucide du potentiel réel.',
   },
 ];
 
 const portfolio = [
-  
   {
-    title: "Immeuble de rapport repositionné",
-    subtitle: "Hauts-de-France",
-    text: "Analyse du potentiel, sécurisation des hypothèses d’exploitation et revalorisation d’ensemble dans une logique de performance.",
-    tag: "Rendement visé > 10 % brut",
+    title: 'Immeuble de rapport repositionné',
+    subtitle: 'Hauts-de-France',
+    text:
+      'Analyse du potentiel, sécurisation des hypothèses d’exploitation et revalorisation d’ensemble dans une logique de performance.',
+    tag: 'Rendement visé > 10 % brut',
     image: siteContent.images.portfolio1,
   },
   {
-    title: "Acquisition à forte logique locative",
-    subtitle: "Marché ciblé",
-    text: "Étude du couple emplacement / travaux / demande locative / projection nette avant prise de décision.",
-    tag: "Approche investissement",
+    title: 'Acquisition à forte logique locative',
+    subtitle: 'Marché ciblé',
+    text:
+      'Étude du couple emplacement / travaux / demande locative / projection nette avant prise de décision.',
+    tag: 'Approche investissement',
     image: siteContent.images.portfolio2,
   },
   {
-    title: "Commercialisation premium d’un actif",
-    subtitle: "Vente optimisée",
-    text: "Positionnement plus défendable, meilleure mise en valeur, et stratégie conçue pour protéger le prix de sortie.",
-    tag: "Maximisation de valeur",
+    title: 'Commercialisation premium d’un actif',
+    subtitle: 'Vente optimisée',
+    text:
+      'Positionnement plus défendable, meilleure mise en valeur, et stratégie conçue pour protéger le prix de sortie.',
+    tag: 'Maximisation de valeur',
     image: siteContent.images.portfolio3,
   },
 ];
 
 const faq = [
   {
-    q: "En quoi Mon Bien Locatif est différent d’une agence classique ?",
-    a: "Nous raisonnons d’abord comme des investisseurs. Cela change la manière d’évaluer un bien, de le vendre, de l’acheter, de le structurer et de l’exploiter.",
+    q: 'En quoi Mon Bien Locatif est différent d’une agence classique ?',
+    a:
+      'Nous raisonnons d’abord comme des investisseurs. Cela change la manière d’évaluer un bien, de le vendre, de l’acheter, de le structurer et de l’exploiter.',
   },
   {
-    q: "Accompagnez-vous uniquement des investisseurs ?",
-    a: "Non. Nous accompagnons aussi les vendeurs et les acquéreurs, mais avec un niveau d’exigence, de méthode et de conseil supérieur à une approche transactionnelle standard.",
+    q: 'Accompagnez-vous uniquement des investisseurs ?',
+    a:
+      'Non. Nous accompagnons aussi les vendeurs et les acquéreurs, mais avec un niveau d’exigence, de méthode et de conseil supérieur à une approche transactionnelle standard.',
   },
   {
-    q: "Pourquoi privilégier une vraie estimation sur rendez-vous ?",
-    a: "Parce qu’une valorisation sérieuse ne repose pas sur un chiffre automatique ou volontairement gonflé. Elle repose sur le bien, son marché, son potentiel et la stratégie de sortie.",
+    q: 'Pourquoi privilégier une vraie estimation sur rendez-vous ?',
+    a:
+      'Parce qu’une valorisation sérieuse ne repose pas sur un chiffre automatique ou volontairement gonflé. Elle repose sur le bien, son marché, son potentiel et la stratégie de sortie.',
   },
   {
-    q: "À qui s’adresse votre réseau ?",
-    a: "Aux profils ambitieux qui veulent rejoindre une structure plus qualitative, avec un positionnement plus crédible, une image plus premium et une vraie logique de montée en gamme.",
+    q: 'À qui s’adresse votre réseau ?',
+    a:
+      'Aux profils ambitieux qui veulent rejoindre une structure plus qualitative, avec un positionnement plus crédible, une image plus premium et une vraie logique de montée en gamme.',
   },
 ];
 
-function SectionTitle({ eyebrow, title, text, align = "left" }) {
+function SectionTitle({ eyebrow, title, text, align = 'left' }) {
   return (
-    <div className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}>
+    <div className={`max-w-3xl ${align === 'center' ? 'mx-auto text-center' : ''}`}>
       <p className="text-xs uppercase tracking-[0.35em] text-stone-500 mb-4">{eyebrow}</p>
-      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-stone-950 leading-tight">{title}</h2>
+      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-stone-950 leading-tight">
+        {title}
+      </h2>
       {text && <p className="mt-5 text-base md:text-lg text-stone-600 leading-relaxed">{text}</p>}
     </div>
   );
@@ -174,14 +216,18 @@ function SecondaryButton({ children }) {
   );
 }
 
-export default function MonBienLocatifSite() {
+function App() {
   return (
     <div className="min-h-screen bg-[#f6f1e8] text-stone-900">
       <header className="sticky top-0 z-50 border-b border-black/5 bg-[#f6f1e8]/90 backdrop-blur">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div>
-            <div className="text-xs uppercase tracking-[0.35em] text-stone-500">{siteContent.brand.name}</div>
-            <div className="text-base font-semibold text-stone-950">{siteContent.brand.tagline}</div>
+            <div className="text-xs uppercase tracking-[0.35em] text-stone-500">
+              {siteContent.brand.name}
+            </div>
+            <div className="text-base font-semibold text-stone-950">
+              {siteContent.brand.tagline}
+            </div>
           </div>
 
           <nav className="hidden lg:flex items-center gap-7 text-sm text-stone-700">
@@ -193,7 +239,10 @@ export default function MonBienLocatifSite() {
             <a href="#faq" className="hover:text-stone-950">FAQ</a>
           </nav>
 
-          <a href="#contact" className="rounded-full bg-stone-950 px-5 py-3 text-sm font-medium text-white hover:opacity-90 transition-opacity">
+          <a
+            href="#contact"
+            className="rounded-full bg-stone-950 px-5 py-3 text-sm font-medium text-white hover:opacity-90 transition-opacity"
+          >
             Nous contacter
           </a>
         </div>
@@ -205,12 +254,14 @@ export default function MonBienLocatifSite() {
           <div className="mx-auto max-w-7xl px-6 pt-16 pb-20 md:pt-24 md:pb-28 relative">
             <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-                <p className="text-xs uppercase tracking-[0.35em] text-stone-500 mb-6">{siteContent.hero.eyebrow}</p>
+                <p className="text-xs uppercase tracking-[0.35em] text-stone-500 mb-6">
+                  {siteContent.hero.eyebrow}
+                </p>
                 <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[0.95] text-stone-950 max-w-4xl">
-                  L’immobilier pensé par des investisseurs, pour des investisseurs exigeants.
+                  {siteContent.hero.title}
                 </h1>
                 <p className="mt-7 max-w-2xl text-lg md:text-xl leading-relaxed text-stone-600">
-                  Un accompagnement sur mesure pour vendre, investir, structurer et valoriser chaque projet immobilier avec plus de méthode, plus d’exigence et plus de cohérence.
+                  {siteContent.hero.text}
                 </p>
 
                 <div className="mt-9 flex flex-wrap gap-4">
@@ -239,10 +290,10 @@ export default function MonBienLocatifSite() {
                       Exigence & sélection
                     </div>
                     <h3 className="mt-5 text-2xl md:text-3xl font-semibold leading-tight">
-                      Une lecture plus stratégique du marché, des actifs et des projets.
+                      {siteContent.hero.cardTitle}
                     </h3>
                     <p className="mt-4 text-white/75 leading-relaxed">
-                      Nous ne cherchons pas à faire plus de volume. Nous cherchons à construire de meilleures décisions, avec un niveau de qualité supérieur à une agence traditionnelle.
+                      {siteContent.hero.cardText}
                     </p>
                   </div>
                 </div>
@@ -253,7 +304,7 @@ export default function MonBienLocatifSite() {
 
         <section className="mx-auto max-w-7xl px-6 py-8 md:py-12">
           <div className="grid md:grid-cols-3 gap-5">
-            {stats.map((item, index) => (
+            {siteContent.stats.map((item, index) => (
               <motion.div
                 key={item.value}
                 initial={{ opacity: 0, y: 16 }}
@@ -262,7 +313,9 @@ export default function MonBienLocatifSite() {
                 transition={{ duration: 0.45, delay: index * 0.08 }}
                 className="rounded-[2rem] border border-black/5 bg-white p-8 shadow-sm"
               >
-                <div className="text-4xl md:text-5xl font-semibold tracking-tight text-stone-950">{item.value}</div>
+                <div className="text-4xl md:text-5xl font-semibold tracking-tight text-stone-950">
+                  {item.value}
+                </div>
                 <p className="mt-4 text-stone-600 leading-relaxed">{item.label}</p>
               </motion.div>
             ))}
@@ -446,12 +499,14 @@ export default function MonBienLocatifSite() {
           <div className="rounded-[2.5rem] bg-stone-950 p-8 md:p-12 text-white shadow-[0_25px_80px_rgba(0,0,0,0.18)]">
             <div className="grid lg:grid-cols-[1fr_0.95fr] gap-10 items-start">
               <div>
-                <p className="text-xs uppercase tracking-[0.35em] text-white/55 mb-4">{siteContent.contact.eyebrow}</p>
+                <p className="text-xs uppercase tracking-[0.35em] text-white/55 mb-4">
+                  {siteContent.contact.eyebrow}
+                </p>
                 <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight">
-                  Parlons de votre bien, de votre projet ou de votre développement.
+                  {siteContent.contact.title}
                 </h2>
                 <p className="mt-6 text-lg leading-relaxed text-white/75 max-w-2xl">
-                  Vente, acquisition, investissement, structuration ou recrutement : nous construisons une réponse adaptée à votre objectif, avec méthode et exigence.
+                  {siteContent.contact.text}
                 </p>
               </div>
 
@@ -472,7 +527,7 @@ export default function MonBienLocatifSite() {
       <footer className="border-t border-black/5">
         <div className="mx-auto max-w-7xl px-6 py-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between text-sm text-stone-600">
           <div>
-            <div className="font-semibold text-stone-950">Mon Bien Locatif</div>
+            <div className="font-semibold text-stone-950">{siteContent.brand.name}</div>
             <div>Immobilier premium • Vente • Investissement • Réseau</div>
           </div>
           <div className="flex flex-wrap gap-4">
@@ -485,3 +540,9 @@ export default function MonBienLocatifSite() {
     </div>
   );
 }
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
