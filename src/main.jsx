@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { motion } from 'framer-motion';
 import { ArrowRight, BarChart3, Building2, ChevronRight, LineChart, ShieldCheck, Users } from 'lucide-react';
-import './index.css';
 
 const siteContent = {
   brand: {
